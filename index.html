@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>날씨</title>
+<meta name="theme-color" content="#EFF3F6" />
+<link rel="manifest" href="manifest.json" />
+<link rel="apple-touch-icon" href="icons/icon-192.png" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="loc">
+      <span id="locName">위치 확인 중…</span>
+    </header>
+
+    <section class="today" id="today" aria-live="polite">
+      <div class="today-icon" id="todayIcon"></div>
+      <div class="today-temp" id="todayTemp">—°</div>
+      <div class="today-desc" id="todayDesc">불러오는 중</div>
+      <div class="today-range">
+        <span id="todayHigh">—°</span> <span class="sep">/</span> <span id="todayLow">—°</span>
+      </div>
+    </section>
+
+    <button class="toggle" id="toggleWeek" aria-expanded="false" aria-controls="week">
+      주간 예보 보기
+    </button>
+
+    <section class="week" id="week" hidden>
+      <ol class="week-list" id="weekList"></ol>
+    </section>
+
+    <p class="error" id="errorMsg" hidden></p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
